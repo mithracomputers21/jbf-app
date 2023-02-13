@@ -104,16 +104,25 @@
           </div>
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
             <div class="member">
-              <img src="assets/img/jaibhim-team/poovizhian.jpg" alt="">
-              <h4>பூவிழியன்</h4>
+              <img src="assets/img/jaibhim-team/ramya.jpg" alt="">
+              <h4>ரம்யா</h4>
+              <span></span>
+              
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+            <div class="member">
+              <img src="assets/img/jaibhim-team/sajan.jpeg" alt="">
+              <h4>சஜன்</h4>
               <span></span>
               
             </div>
           </div>
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
             <div class="member">
-              <img src="assets/img/jaibhim-team/ramya.jpg" alt="">
-              <h4>ரம்யா</h4>
+              <img src="assets/img/jaibhim-team/sridhar.jpg" alt="">
+              <h4>ஸ்ரீதர் கண்ணன்</h4>
               <span></span>
               
             </div>
@@ -131,23 +140,16 @@
         </div>
 
         <div class="row">
-            <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+        <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
             <div class="member">
-              <img src="assets/img/jaibhim-team/ganesh.jpg" alt="">
-              <h4>கணேஷ்</h4>
+              <img src="assets/img/jaibhim-team/senthil.jpg" alt="">
+              <h4>செந்தில்குமார்</h4>
               <span></span>
               
             </div>
           </div>
 
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-            <div class="member">
-              <img src="assets/img/jaibhim-team/sridhar.jpg" alt="">
-              <h4>ஸ்ரீதர் கண்ணன்</h4>
-              <span></span>
-              
-            </div>
-          </div>
+          
             
             <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
             <div class="member">
@@ -157,7 +159,14 @@
               
             </div>
           </div>
-
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+            <div class="member">
+              <img src="assets/img/jaibhim-team/ganesh.jpg" alt="">
+              <h4>கணேஷ்</h4>
+              <span></span>
+              
+            </div>
+          </div>
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
             <div class="member">
               <img src="assets/img/jaibhim-team/bramma.jpg" alt="">

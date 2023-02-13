@@ -69,40 +69,34 @@ transform: translate(-50%,-50%)
           <li><a class="nav-link scrollto" href="#services">Services</a></li>
           <li><a class="nav-link scrollto " href="#portfolio">Portfolio</a></li>
           <li><a class="nav-link scrollto" href="#testimonials">Testimonials</a></li> -->
+          <li class="dropdown"><a href="#" class="{{ (request()->is('jaibhim-20-*')) ? 'active' : '' }}"><span>ஜெய்பீம் 2.0</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="{{ url('jaibhim-20-purpose') }}">நோக்கம்</a></li>
+              <li><a href="{{ url('jaibhim-20-activities') }}">பணிகள்</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="#" class="{{ (request()->is('ambedkar-*')) ? 'active' : '' }}"><span>அம்பேத்கர் படிப்பகம்</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="#">புதிய படிப்பகங்கள் உருவாக்க</a></li>
+              <li><a href="#">இயங்கும் படிப்பகங்களை இணைக்க</a></li>
+              <li><a href="#">சமத்துவ தூதுவராக இணைய</a></li>
+              <li><a href="#">படிப்பகங்களின் பட்டியல்</a></li>
+            </ul>
+          </li>
           <li class="dropdown"><a href="#" class="{{ (request()->is('jaibhimfoundation-*')) ? 'active' : '' }}"><span>ஜெய்பீம் ஃபௌண்டேஷன்</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a class="nav-link scrollto {{ (request()->is('jaibhimfoundation-administration')) ? 'active' : '' }}" href="{{ url('jaibhimfoundation-administration') }}">நிர்வாகம்</a></li>
-              <!-- <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="#">நிர்வாகம்</a></li>
-                  <li><a href="#">நோக்கம்</a></li>
-                  <li><a href="#">பணிகள்</a></li>
-                  <li><a href="#">குழு ஒருங்கிணைப்பாளர்கள்</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
-              </li> -->
-              <li><a href="{{ url('jaibhimfoundation-purpose') }}">நோக்கம்</a></li>
-              <li><a href="{{ url('jaibhimfoundation-publication') }}">ஜெய்பீம் பதிப்பகம்</a></li>
-              <li><a href="{{ url('jaibhimfoundation-activities') }}">பணிகள்</a></li>
               <li><a href="{{ url('international-translation-committee') }}">மொழி பெயர்ப்பு குழு</a></li>
               <li><a href="{{ url('jaibhimfoundation-team') }}">தகவல் தொழில்நுட்பக்குழு</a></li>
+              <li><a href="#">ஆலோசனைகுழு</a></li>
             </ul>
           </li>
           <li class="dropdown"><a href="#" class="{{ (request()->is('ambedkariyam-*')) ? 'active' : '' }}"><span>அம்பேத்கரியம் 50</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="{{ url('ambedkariyam-50-purchase') }}">அம்பேத்கரிய தொகுப்புகளை வாங்க</a></li>
-              <li><a href="{{ url('ambedkariyam-volume-details') }}">தொகுப்புகளின் விவரம்</a></li>
-            </ul>
-          </li>
-          <li class="dropdown"><a href="#" class="{{ (request()->is('jaibhim-*')) ? 'active' : '' }}"><span>ஜெய்பீம் 2.0</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a href="{{ url('jaibhim-20-purpose') }}">நோக்கம்</a></li>
-              <li><a href="{{ url('jaibhim-20-activities') }}">பணிகள்</a></li>
+              <li><a href="{{ url('ambedkariyam-volume-details') }}">அம்பேத்கரிய தொகுப்புகளின் விவரம்</a></li>
               <li><a href="{{ url('joining-form') }}">அம்பேத்கரிய தூதுவராக இணைய</a></li>
               <li><a href="{{ url('ambedkariyam-ambassadors') }}">அம்பேத்கரிய தூதுவர் பட்டியல்</a></li>
-              <li><a href="{{ url('ambedkariyam-library-open-procedures') }}">அம்பேத்கரிய படிப்பகம் உருவாக்க</a></li>
-              <li><a href="{{ url('ambedkariyam-librarys-list') }}">உங்கள் படிப்பகத்தை இணைக்க</a></li>
-              <li><a href="{{ url('ambedkariyam-librarys-list') }}">படிப்பகங்களின் பட்டியல்</a></li>
             </ul>
           </li>
           <li class="dropdown"><a href="#"><span>மீடியா</span> <i class="bi bi-chevron-down"></i></a>
@@ -111,7 +105,7 @@ transform: translate(-50%,-50%)
               <li><a href="{{ url('videos') }}">காணொளிகள்</a></li>
             </ul>
           </li>
-          <li><a class="nav-link scrollto {{ (request()->is('contact')) ? 'active' : '' }}" href="{{ url('contact') }}">தொடர்புக்கு</a></li>
+          <!-- <li><a class="nav-link scrollto {{ (request()->is('contact')) ? 'active' : '' }}" href="{{ url('contact') }}">தொடர்புக்கு</a></li> -->
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
