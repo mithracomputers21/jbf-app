@@ -110,7 +110,7 @@
                 <div class="col-lg-4 info mt-4 mt-lg-0">
                   <i class="bi bi-phone"></i>
                   <h4>Call:</h4>
-                  <p>+91 9443666372</p>
+                  <p>+91 8072384874</p>
                 </div>
               </div>
             </div>
