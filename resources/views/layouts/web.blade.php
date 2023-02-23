@@ -95,7 +95,7 @@ transform: translate(-50%,-50%)
             <ul>
               <li><a href="{{ url('ambedkariyam-50-purchase') }}">அம்பேத்கரிய தொகுப்புகளை வாங்க</a></li>
               <li><a href="{{ url('ambedkariyam-volume-details') }}">அம்பேத்கரிய தொகுப்புகளின் விவரம்</a></li>
-              <li><a href="{{ url('joining-form') }}">அம்பேத்கரிய தூதுவராக இணைய</a></li>
+              <li><a href="{{ url('join') }}">அம்பேத்கரிய தூதுவராக இணைய</a></li>
               <li><a href="{{ url('ambedkariyam-ambassadors') }}">அம்பேத்கரிய தூதுவர் பட்டியல்</a></li>
             </ul>
           </li>
