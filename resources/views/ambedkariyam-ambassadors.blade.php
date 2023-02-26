@@ -28,6 +28,7 @@
     <table class=" table table-bordered table-responsive table-striped table-hover datatable datatable-Member">
                             <thead>
                                 <tr>
+                                    <th>Sl No</th>
                                     <th>
                                         Receipt No
                                     </th>
@@ -54,6 +55,7 @@
                             <tbody>
                                 @foreach($members as $key => $member)
                                     <tr data-entry-id="{{ $member->id }}">
+                                        <td>{{ $member->id }}</td>
                                         <td>
                                             {{ intval($member->receipt_number) ?? '' }}
                                         </td>
