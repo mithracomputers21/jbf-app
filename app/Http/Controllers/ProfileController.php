@@ -79,7 +79,7 @@ class ProfileController extends Controller
             ->join('member_payments', 'members.id', '=', 'member_payments.member_id')
             ->select('members.*', 'member_payments.receipt_number as receipt_number', 'member_libraries.district_id as district', 'member_libraries.block_id as block', 'member_libraries.village_id as village', 'member_libraries.habitation_id as habitation')
             ->distinct()
-            ->orderBy('receipt_number', 'desc')
+            ->orderBy('receipt_number', 'asc')
             ->get();
 
         // $members = DB::table('members')
