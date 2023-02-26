@@ -78,7 +78,7 @@ class ProfileController extends Controller
             ->join('member_libraries', 'members.id', '=', 'member_libraries.member_id')
             ->join('member_payments', 'members.id', '=', 'member_payments.member_id')
             ->select('members.id as id', 'members.name as name', 'members.plan_id as plan_id', 'member_payments.receipt_number as receipt_number', 'member_libraries.district_id as district', 'member_libraries.block_id as block', 'member_libraries.village_id as village', 'member_libraries.habitation_id as habitation')
-            ->distinct()
+            ->distinct('plan_id')
             ->orderBy('id', 'asc')
             ->orderBy('receipt_number', 'asc')
             ->get();
