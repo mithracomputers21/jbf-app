@@ -1,4 +1,10 @@
 @extends('layouts.web')
+@section('styles')
+<link 
+ rel="stylesheet"
+ href="https://cdn.datatables.net/1.13.2/css/jquery.dataTables.min.css"
+>
+@endsection
 @section('content')
 <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel" style="padding-top:70px;">
     <div class="carousel-inner">
@@ -25,7 +31,7 @@
 
     <div class="card-body">
     <div class="table-responsive">
-    <table class=" table table-bordered table-responsive table-striped table-hover datatable datatable-Member">
+    <table id="example" class="display" style="width:100%">
                             <thead>
                                 <tr>
                                     <th>Sl No</th>
@@ -90,4 +96,11 @@
 @endsection
 @section('scripts')
 @parent
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="https://cdn.datatables.net/1.13.2/js/jquery.dataTables.min.js"></script>
+<script>
+$(document).ready(function () {
+    $('#example').DataTable();
+});
+</script>
 @endsection
