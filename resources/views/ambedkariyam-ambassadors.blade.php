@@ -29,6 +29,9 @@
                             <thead>
                                 <tr>
                                     <th>
+                                        Receipt No
+                                    </th>
+                                    <th>
                                         Name
                                     </th>
                                     <th>
@@ -51,6 +54,9 @@
                             <tbody>
                                 @foreach($members as $key => $member)
                                     <tr data-entry-id="{{ $member->id }}">
+                                        <td>
+                                            {{ $member->receipt_number ?? '' }}
+                                        </td>
                                         <td>
                                             {{ $member->name ?? '' }}
                                         </td>
