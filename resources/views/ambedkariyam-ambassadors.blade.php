@@ -55,7 +55,7 @@
                                 @foreach($members as $key => $member)
                                     <tr data-entry-id="{{ $member->id }}">
                                         <td>
-                                            {{ $member->receipt_number ?? '' }}
+                                            {{ intval($member->receipt_number) ?? '' }}
                                         </td>
                                         <td>
                                             {{ $member->name ?? '' }}
