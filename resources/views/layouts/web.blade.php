@@ -64,7 +64,7 @@ transform: translate(-50%,-50%)
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li><a class="nav-link scrollto {{ (request()->is('/')) ? 'active' : '' }}" href="{{ url('/') }}">முகப்பு</a></li>
+          <!-- <li><a class="nav-link scrollto {{ (request()->is('/')) ? 'active' : '' }}" href="{{ url('/') }}">முகப்பு</a></li> -->
           <!-- <li><a class="nav-link scrollto" href="#about">About</a></li>
           <li><a class="nav-link scrollto" href="#services">Services</a></li>
           <li><a class="nav-link scrollto " href="#portfolio">Portfolio</a></li>
@@ -73,14 +73,6 @@ transform: translate(-50%,-50%)
             <ul>
               <li><a href="{{ url('jaibhim-20-purpose') }}">நோக்கம்</a></li>
               <li><a href="{{ url('jaibhim-20-activities') }}">பணிகள்</a></li>
-            </ul>
-          </li>
-          <li class="dropdown"><a href="#" class="{{ (request()->is('ambedkar-*')) ? 'active' : '' }}"><span>அம்பேத்கர் படிப்பகம்</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a href="#">புதிய படிப்பகங்கள் உருவாக்க</a></li>
-              <li><a href="#">இயங்கும் படிப்பகங்களை இணைக்க</a></li>
-              <li><a href="#">சமத்துவ தூதுவராக இணைய</a></li>
-              <li><a href="#">படிப்பகங்களின் பட்டியல்</a></li>
             </ul>
           </li>
           <li class="dropdown"><a href="#" class="{{ (request()->is('jaibhimfoundation-*')) ? 'active' : '' }}"><span>ஜெய்பீம் ஃபௌண்டேஷன்</span> <i class="bi bi-chevron-down"></i></a>
@@ -97,6 +89,14 @@ transform: translate(-50%,-50%)
               <li><a href="{{ url('ambedkariyam-volume-details') }}">அம்பேத்கரிய தொகுப்புகளின் விவரம்</a></li>
               <li><a href="{{ url('join') }}">அம்பேத்கரிய தூதுவராக இணைய</a></li>
               <li><a href="{{ url('ambedkariyam-ambassadors') }}">அம்பேத்கரிய தூதுவர் பட்டியல்</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="#" class="{{ (request()->is('ambedkar-*')) ? 'active' : '' }}"><span>அம்பேத்கர் படிப்பகம்</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="#">புதிய படிப்பகங்கள் உருவாக்க</a></li>
+              <li><a href="#">இயங்கும் படிப்பகங்களை இணைக்க</a></li>
+              <li><a href="#">சமத்துவ தூதுவராக இணைய</a></li>
+              <li><a href="#">படிப்பகங்களின் பட்டியல்</a></li>
             </ul>
           </li>
           <li class="dropdown"><a href="#"><span>மீடியா</span> <i class="bi bi-chevron-down"></i></a>
