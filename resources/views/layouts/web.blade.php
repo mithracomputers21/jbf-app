@@ -93,10 +93,10 @@ transform: translate(-50%,-50%)
           </li>
           <li class="dropdown"><a href="#" class="{{ (request()->is('ambedkar-*')) ? 'active' : '' }}"><span>அம்பேத்கர் படிப்பகம்</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="#">புதிய படிப்பகங்கள் உருவாக்க</a></li>
-              <li><a href="#">இயங்கும் படிப்பகங்களை இணைக்க</a></li>
-              <li><a href="#">சமத்துவ தூதுவராக இணைய</a></li>
-              <li><a href="#">படிப்பகங்களின் பட்டியல்</a></li>
+              <li><a href="{{ url('sponsors') }}">புதிய படிப்பகங்கள் உருவாக்க</a></li>
+              <li><a href="{{ url('sponsors') }}">இயங்கும் படிப்பகங்களை இணைக்க</a></li>
+              <li><a href="{{ url('sponsors') }}">சமத்துவ தூதுவராக இணைய</a></li>
+              <li><a href="{{ url('sponsors-list') }}">படிப்பகங்களின் பட்டியல்</a></li>
             </ul>
           </li>
           <li class="dropdown"><a href="#"><span>மீடியா</span> <i class="bi bi-chevron-down"></i></a>

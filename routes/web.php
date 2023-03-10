@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Livewire\Sponsors;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\Join;
@@ -83,6 +84,8 @@ Route::get('videos', function () {
 Route::get('contact', function () {
     return view('contact');
 });
+
+Route::get('sponsors', Sponsors::class);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
