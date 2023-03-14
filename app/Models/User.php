@@ -11,7 +11,7 @@ use Filament\Models\Contracts\FilamentUser;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 
-class User extends Authenticatable
+class User extends Authenticatable implements FilamentUser
 {
     use HasApiTokens, HasFactory, Notifiable;
 
@@ -50,4 +50,8 @@ class User extends Authenticatable
         return $this->belongsTo(MemberPayment::class);
     }
 
+    public function canAccessFilament(): bool
+    {
+        return str_ends_with($this->email, '@gmail.com') && $this->hasVerifiedEmail();
+    }
 }
