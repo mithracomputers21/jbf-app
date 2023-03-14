@@ -2,18 +2,24 @@
 
 namespace App\Http\Livewire;
 
+use App\Models\Sponsor;
 use Filament\Forms;
-use Filament\Forms\Contracts\HasForms;
-use Livewire\Component;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Radio;
 use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Components\Card;
-use App\Models\Sponsor;
+use Illuminate\Contracts\View\View;
+use Illuminate\Database\Eloquent\Model;
+use Filament\Forms\Concerns\InteractsWithForms;
+use Filament\Forms\Contracts\HasForms;
+use Livewire\Component;
+
 
 class Sponsors extends Component implements HasForms
 {
-    use Forms\Concerns\InteractsWithForms;
+    use InteractsWithForms;
+
+    public array $data = [];
 
     public $new_library_or_join_old_library;
     public $date;
@@ -29,6 +35,16 @@ class Sponsors extends Component implements HasForms
     public $computer_sponsor;
     public $electrical_items_sponsor;
     public $books_sponsors;
+
+    public function mount(): void
+    {
+        $this->form->fill();
+    }
+
+    public function render()
+    {
+        return view('livewire.sponsors');
+    }
 
     protected function getFormSchema(): array 
     {
@@ -55,13 +71,19 @@ class Sponsors extends Component implements HasForms
         ];
     } 
 
-    public function submit()
+    protected function getFormStatePath(): ?string
     {
-        Sponsors::create($this->form->getState());
+        return 'data';
     }
 
-    public function render()
+    protected function getFormModel(): Model|string|null
     {
-        return view('livewire.sponsors');
+        return Sponsors::class;
     }
+
+    public function submitForm()
+    {
+        $sponsors = Sponsors::save();
+    }
+
 }

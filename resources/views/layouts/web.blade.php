@@ -80,6 +80,7 @@ transform: translate(-50%,-50%)
               <li><a class="nav-link scrollto {{ (request()->is('jaibhimfoundation-administration')) ? 'active' : '' }}" href="{{ url('jaibhimfoundation-administration') }}">நிர்வாகம்</a></li>
               <li><a href="{{ url('international-translation-committee') }}">மொழி பெயர்ப்பு குழு</a></li>
               <li><a href="{{ url('jaibhimfoundation-team') }}">தகவல் தொழில்நுட்பக்குழு</a></li>
+              <li><a href="{{ url('proof-reading-committee') }}">சரிபார்ப்பு குழு</a></li>
               <li><a href="#">ஆலோசனைகுழு</a></li>
             </ul>
           </li>

@@ -42,6 +42,10 @@ Route::get('international-translation-committee', function () {
     return view('international-translation-committee');
 });
 
+Route::get('proof-reading-committee', function () {
+    return view('proof-reading-committee');
+});
+
 Route::get('jaibhimfoundation-team', function () {
     return view('jaibhimfoundation-team');
 });
