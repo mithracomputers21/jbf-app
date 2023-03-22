@@ -19,8 +19,6 @@ class Sponsors extends Component implements HasForms
 {
     use InteractsWithForms;
 
-    public array $data = [];
-
     public $new_library_or_join_old_library;
     public $date;
     public $village_address;
@@ -83,7 +81,7 @@ class Sponsors extends Component implements HasForms
 
     public function submitForm()
     {
-        $sponsors = Sponsors::save();
+        $sponsors = Sponsors::submit();
     }
 
 }
