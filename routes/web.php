@@ -4,7 +4,6 @@ use App\Http\Livewire\Sponsors;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\Join;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -74,8 +73,6 @@ Route::get(
 Route::get('ambedkariyam-library-open-procedures', function () {
     return view('ambedkariyam-library-open-procedures');
 });
-
-Route::post('/sendEventMail','JaibhimController@sendMail')->name('send.email');
 
 Route::get('photos', function () {
     return view('photos');

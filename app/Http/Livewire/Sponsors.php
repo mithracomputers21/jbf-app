@@ -19,31 +19,21 @@ class Sponsors extends Component implements HasForms
 {
     use InteractsWithForms;
 
-    public $new_library_or_join_old_library;
-    public $date;
-    public $village_address;
-    public $old_library_name;
-    public $new_library_land_size;
-    public $contact_person_name;
-    public $contact_person_phone;
-    public $ambedkariyam_50_sponsor_name;
-    public $ambedkariya_thoothuvar_land_sponsor;
-    public $building_materials_sponsor;
-    public $table_chair_sponsor;
-    public $computer_sponsor;
-    public $electrical_items_sponsor;
-    public $books_sponsors;
-
-    public function mount(): void
-    {
-        $this->form->fill();
-    }
-
-    public function render()
-    {
-        return view('livewire.sponsors');
-    }
-
+    public $new_library_or_join_old_library = '';
+    public $date = '';
+    public $village_address = '';
+    public $old_library_name = '';
+    public $new_library_land_size = '';
+    public $contact_person_name = '';
+    public $contact_person_phone = '';
+    public $ambedkariyam_50_sponsor_name = '';
+    public $ambedkariya_thoothuvar_land_sponsor = '';
+    public $building_materials_sponsor = '';
+    public $table_chair_sponsor = '';
+    public $computer_sponsor = '';
+    public $electrical_items_sponsor = '';
+    public $books_sponsors = '';
+    
     protected function getFormSchema(): array 
     {
         return [
@@ -69,19 +59,14 @@ class Sponsors extends Component implements HasForms
         ];
     } 
 
-    protected function getFormStatePath(): ?string
+    public function sponsors(): void
     {
-        return 'data';
+        Sponsor::create($this->form->getState());
     }
 
-    protected function getFormModel(): Model|string|null
+    public function render()
     {
-        return Sponsors::class;
-    }
-
-    public function submitForm()
-    {
-        $sponsors = Sponsors::submit();
+        return view('livewire.sponsors');
     }
 
 }
