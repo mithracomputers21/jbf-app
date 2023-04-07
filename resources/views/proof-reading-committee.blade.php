@@ -77,7 +77,7 @@
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
             <div class="member">
               <img src="assets/img/jaibhim-team/karuppaiah.jpg" alt="">
-              <h4>Dr. Karupiah</h4>
+              <h4>Dr. R. Karuppaiya</h4>
               <span></span>
               
             </div>
