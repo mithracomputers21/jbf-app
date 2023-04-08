@@ -33,6 +33,7 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Filament\Notifications\Notification;
 use Illuminate\Validation\ValidationException;
+use Carbon\Carbon;
 
 class MemberResource extends Resource
 {
@@ -110,8 +111,8 @@ class MemberResource extends Resource
                             ->relationship('member_payments')
                             ->schema([                               
                                 Select::make('method_id')
-                                ->relationship('method', 'payment_method'),
-                                DatePicker::make('payment_date'),
+                                ->relationship('method', 'payment_method')->default(6),
+                                DatePicker::make('payment_date')->default(Carbon::now()),
                                 TextInput::make('amount')
                                 ->numeric()->default('0'),
                                 TextInput::make('transaction_id')->default('NA'),
