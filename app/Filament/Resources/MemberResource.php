@@ -46,7 +46,7 @@ class MemberResource extends Resource
             ->schema([
                 Card::make()
                     ->schema([
-                        TextInput::make('name')->maxLength(255)->required(),
+                        TextInput::make('name')->maxLength(255)->required()->default('Cancelled'),
                         TextInput::make('address')->maxLength(255)->default('NA')->required(),
                         TextInput::make('phone_number')->required()->length(10)->default('0000000000'),
                         TextInput::make('email')->email()->required()->default('cancelled@gmail.com'),
