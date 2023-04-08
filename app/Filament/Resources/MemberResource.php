@@ -47,16 +47,16 @@ class MemberResource extends Resource
                 Card::make()
                     ->schema([
                         TextInput::make('name')->maxLength(255)->required(),
-                        TextInput::make('address')->maxLength(255)->required(),
-                        TextInput::make('phone_number')->required()->length(10),
-                        TextInput::make('email')->email()->required(),
+                        TextInput::make('address')->maxLength(255)->default('NA')->required(),
+                        TextInput::make('phone_number')->required()->length(10)->default('0000000000'),
+                        TextInput::make('email')->email()->required()->default('cancelled@gmail.com'),
                         Select::make('plan_id')
-                            ->relationship('plan', 'plan_name')->required(),
+                            ->relationship('plan', 'plan_name')->required()->default(6),
                         Select::make('type_id')
-                            ->relationship('type', 'plan_type')->required(),
+                            ->relationship('type', 'plan_type')->required()->required()->default(3),
                         Select::make('event_id')
-                            ->relationship('event', 'event_name'),
-                        TextInput::make('notes')
+                            ->relationship('event', 'event_name')->required()->required()->default(4),
+                        TextInput::make('notes')->default('NA')
                     ])->columns(2),
                     Card::make()
                         ->schema([
@@ -67,8 +67,7 @@ class MemberResource extends Resource
                                     ->label('District')
                                     ->options(District::all()->pluck('district_name', 'id')->toArray())
                                     ->reactive()
-                                    ->afterStateUpdated(fn (callable $set) => $set('block_id', null))
-                                    ->required(),
+                                    ->afterStateUpdated(fn (callable $set) => $set('block_id', null)),
                                     Select::make('block_id')
                                     ->label('Block')
                                     ->options(function (callable $get){
@@ -76,11 +75,9 @@ class MemberResource extends Resource
                                         if($district) {
                                             return $district->blocks->pluck('block_name', 'id');
                                         }
-                                        
                                     })
                                     ->reactive()
-                                    ->afterStateUpdated(fn (callable $set) => $set('village_id', null))
-                                    ->required(),
+                                    ->afterStateUpdated(fn (callable $set) => $set('village_id', null)),
                                     Select::make('village_id')
                                     ->label('Village')
                                     ->options(function (callable $get){
@@ -88,11 +85,9 @@ class MemberResource extends Resource
                                         if($block) {
                                             return $block->villages->pluck('village_name', 'id');
                                         }
-                                        
                                     })
                                     ->reactive()
-                                    ->afterStateUpdated(fn (callable $set) => $set('habitation_id', null))
-                                    ->required(),
+                                    ->afterStateUpdated(fn (callable $set) => $set('habitation_id', null)),
                                     Select::make('habitation_id')
                                     ->label('Habitation')
                                     ->options(function (callable $get){
@@ -100,13 +95,10 @@ class MemberResource extends Resource
                                         if($village) {
                                             return $village->habitations->pluck('habitation_name', 'id');
                                         }
-                                        
                                     })
-                                    ->unique(ignoreRecord: true)
-                                    ->reactive()
-                                    ->required(),
-                                    TextInput::make('contact_person_name')->required(),
-                                    TextInput::make('contact_person_number')->required()->length(10),
+                                    ->reactive(),
+                                    TextInput::make('contact_person_name'),
+                                    TextInput::make('contact_person_number')->length(10),
                                     Toggle::make('library_available')->inline(false)->label('Is Library Available?'),
                                     TextInput::make('library_name')
                                 ])
@@ -118,11 +110,11 @@ class MemberResource extends Resource
                             ->relationship('member_payments')
                             ->schema([                               
                                 Select::make('method_id')
-                                ->relationship('method', 'payment_method')->required(),
-                                DatePicker::make('payment_date')->required()->maxDate(now()),
+                                ->relationship('method', 'payment_method'),
+                                DatePicker::make('payment_date'),
                                 TextInput::make('amount')
-                                ->numeric()->required(),
-                                TextInput::make('transaction_id')->required(),
+                                ->numeric()->default('0'),
+                                TextInput::make('transaction_id')->default('NA'),
                                 TextInput::make('receipt_number')->required(),
                                 FileUpload::make('attachment'),
                                 Toggle::make('bank_status')->inline(false)->label('Is bank Status verified?'),
