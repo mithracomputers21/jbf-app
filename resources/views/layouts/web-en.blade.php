@@ -5,26 +5,26 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>ஜெய்பீம் ஃபௌண்டேஷன்</title>
+  <title>Jaibhim Foundation</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="/assets/img/favicon.png" rel="icon">
+  <link href="/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="/assets/css/style.css" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: Lumia - v4.7.0
@@ -59,7 +59,7 @@ transform: translate(-50%,-50%)
       <div class="logo me-auto">
         <!-- <h1><a href="index.html">Lumia</a></h1> -->
         <!-- Uncomment below if you prefer to use an image logo -->
-        <a href="{{ url('/') }}"><img src="assets/img/jaibhim-logo.png" alt="" class="img-fluid"></a>
+        <a href="{{ url('en/') }}"><img src="/assets/img/jaibhim-logo.png" alt="" class="img-fluid"></a>
       </div>
 
       <nav id="navbar" class="navbar order-last order-lg-0">
@@ -69,41 +69,41 @@ transform: translate(-50%,-50%)
           <li><a class="nav-link scrollto" href="#services">Services</a></li>
           <li><a class="nav-link scrollto " href="#portfolio">Portfolio</a></li>
           <li><a class="nav-link scrollto" href="#testimonials">Testimonials</a></li> -->
-          <li class="dropdown"><a href="#" class="{{ (request()->is('jaibhim-20-*')) ? 'active' : '' }}"><span>ஜெய்பீம் 2.0</span> <i class="bi bi-chevron-down"></i></a>
+          <li class="dropdown"><a href="#" class="{{ (request()->is('en/jaibhim-20-*')) ? 'active' : '' }}"><span>Jaibhim 2.0</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="{{ url('jaibhim-20-purpose') }}">நோக்கம்</a></li>
-              <li><a href="{{ url('jaibhim-20-activities') }}">பணிகள்</a></li>
+              <li><a href="{{ url('en/jaibhim-20-purpose') }}">Vision</a></li>
+              <li><a href="{{ url('en/jaibhim-20-activities') }}">Mission</a></li>
             </ul>
           </li>
-          <li class="dropdown"><a href="#" class="{{ (request()->is('jaibhimfoundation-*')) ? 'active' : '' }}"><span>ஜெய்பீம் ஃபௌண்டேஷன்</span> <i class="bi bi-chevron-down"></i></a>
+          <li class="dropdown"><a href="#" class="{{ (request()->is('en/jaibhimfoundation-*')) ? 'active' : '' }}"><span>Jaibhim Foundation</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a class="nav-link scrollto {{ (request()->is('jaibhimfoundation-administration')) ? 'active' : '' }}" href="{{ url('jaibhimfoundation-administration') }}">நிர்வாகம்</a></li>
-              <li><a href="{{ url('international-translation-committee') }}">மொழி பெயர்ப்பு குழு</a></li>
-              <li><a href="{{ url('jaibhimfoundation-team') }}">தகவல் தொழில்நுட்பக்குழு</a></li>
-              <li><a href="{{ url('proof-reading-committee') }}">சரிபார்ப்பு குழு</a></li>
-              <li><a href="#">ஆலோசனைகுழு</a></li>
+              <li><a class="nav-link scrollto {{ (request()->is('en/jaibhimfoundation-administration')) ? 'active' : '' }}" href="{{ url('en/jaibhimfoundation-administration') }}">Leadership / Administration</a></li>
+              <li><a href="{{ url('en/international-translation-committee') }}">Translation Team</a></li>
+              <li><a href="{{ url('en/jaibhimfoundation-team') }}">IT Team</a></li>
+              <li><a href="{{ url('en/proof-reading-committee') }}">Review Team</a></li>
+              <li><a href="#">Advisory Team</a></li>
             </ul>
           </li>
-          <li class="dropdown"><a href="#" class="{{ (request()->is('ambedkariyam-*')) ? 'active' : '' }}"><span>அம்பேத்கரியம் 50</span> <i class="bi bi-chevron-down"></i></a>
+          <li class="dropdown"><a href="#" class="{{ (request()->is('ambedkariyam-*')) ? 'active' : '' }}"><span>Ambedkariam 50</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="{{ url('ambedkariyam-50-purchase') }}">அம்பேத்கரிய தொகுப்புகளை வாங்க</a></li>
-              <li><a href="{{ url('ambedkariyam-volume-details') }}">அம்பேத்கரிய தொகுப்புகளின் விவரம்</a></li>
-              <li><a href="{{ url('join') }}">அம்பேத்கரிய தூதுவராக இணைய</a></li>
-              <li><a href="{{ url('ambedkariyam-ambassadors') }}">அம்பேத்கரிய தூதுவர் பட்டியல்</a></li>
+              <li><a href="{{ url('en/ambedkariyam-50-purchase') }}">To Buy Ambedkarism Book Set</a></li>
+              <li><a href="{{ url('en/ambedkariyam-volume-details') }}">About the Ambedkarism Book Set</a></li>
+              <li><a href="{{ url('en/join') }}">To join as an Ambassador of Ambedkarism</a></li>
+              <li><a href="{{ url('ambedkariyam-ambassadors') }}">List of Ambassadors of Ambedkarism</a></li>
             </ul>
           </li>
-          <li class="dropdown"><a href="#" class="{{ (request()->is('ambedkar-*')) ? 'active' : '' }}"><span>அம்பேத்கர் படிப்பகம்</span> <i class="bi bi-chevron-down"></i></a>
+          <li class="dropdown"><a href="#" class="{{ (request()->is('ambedkar-*')) ? 'active' : '' }}"><span>Ambedkar Study Centre</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="{{ url('sponsors') }}">புதிய படிப்பகங்கள் உருவாக்க</a></li>
-              <li><a href="{{ url('sponsors') }}">இயங்கும் படிப்பகங்களை இணைக்க</a></li>
-              <li><a href="{{ url('sponsors') }}">சமத்துவ தூதுவராக இணைய</a></li>
-              <li><a href="{{ url('sponsors-list') }}">படிப்பகங்களின் பட்டியல்</a></li>
+              <li><a href="{{ url('sponsors') }}">To start a new study centre</a></li>
+              <li><a href="{{ url('sponsors') }}">To affiliate an existing centre</a></li>
+              <li><a href="{{ url('sponsors') }}">To join as an Equality Ambassador</a></li>
+              <li><a href="{{ url('sponsors-list') }}">List of study centres</a></li>
             </ul>
           </li>
-          <li class="dropdown"><a href="#"><span>மீடியா</span> <i class="bi bi-chevron-down"></i></a>
+          <li class="dropdown"><a href="#"><span>Media</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="{{ url('photos') }}">புகைப்படங்கள்</a></li>
-              <li><a href="{{ url('videos') }}">காணொளிகள்</a></li>
+              <li><a href="{{ url('en/photos') }}">Photogrpahs</a></li>
+              <li><a href="{{ url('en/videos') }}">Videos</a></li>
             </ul>
           </li>
           <li class="dropdown"><a href="#"><span>Language</span> <i class="bi bi-chevron-down"></i></a>
@@ -147,7 +147,7 @@ transform: translate(-50%,-50%)
     <div class="container d-md-flex py-4">
       <div class="me-md-auto text-center text-md-start">
         <div class="copyright">
-          &copy; Copyright {{ date('Y') }} <strong><span>ஜெய்பீம் ஃபௌண்டேஷன்</span></strong>. All Rights Reserved
+          &copy; Copyright {{ date('Y') }} <strong><span>Jaibhim Foundation</span></strong>. All Rights Reserved
         </div>
         <div class="credits">
           Made with &hearts; by <a href="https://mithracomputers.com/">Mithra Computers</a>
@@ -166,16 +166,16 @@ transform: translate(-50%,-50%)
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
-  <script src="assets/vendor/purecounter/purecounter.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="en/assets/vendor/purecounter/purecounter.js"></script>
+  <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="/assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="/assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="/assets/vendor/php-email-form/validate.js"></script>
 
   <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+  <script src="/assets/js/main.js"></script>
 @yield('scripts')
 </body>
 
