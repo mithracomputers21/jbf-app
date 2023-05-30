@@ -49,20 +49,20 @@
           <div class="col-md-6 mt-4">
             <div class="icon-box">
               <h4><a href="">Your Libraries also connected</a></h4>
-              <p style="text-align:justify;">Ambedkar/Periyar/Ayothitasar/Thiruma Podagakas which are already working in your area can join this scheme and create great integration at Tamil Nadu level. Through it Ambedkar's dream can be realized. Students who want to fulfill Ambedkar's dream fill the application form here and send it....</p>
+              <p style="text-align:justify;">Ambedkar/Periyar/Ayothitasar/Thiruma Padippagam which are already working in your area can join this scheme and create great integration at Tamil Nadu level. Through it Ambedkar's dream can be realized. Students who want to fulfill Ambedkar's dream fill the application form here and send it....</p>
               <p><a href="{{ url('en/joining-form') }}">Join the Project</a></p>
             </div>
           </div>
           <div class="col-md-6 mt-4">
             <div class="icon-box">
-              <h4><a href="">Interested in hosting a Jai ​​Bhim 2.0 event in your area?</a></h4>
-              <p style="text-align:justify;">If more than 300 people join the Jai Bheem 2.0 program, Eruchithamizhar will preside over the event and present Ambedkarian ambassador certificates...</p>
+              <h4><a href="">Interested in hosting a Jaibhim 2.0 event in your area?</a></h4>
+              <p style="text-align:justify;">If more than 300 people join the Jaibhim 2.0 program, Eruchithamizhar will preside over the event and present Ambedkarian ambassador certificates...</p>
               <p><a href="{{ url('en/ambedkariyam-library-open-procedures') }}">Yes. Like to join!</a></p>
             </div>
           </div>
           <div class="col-md-6 mt-4">
             <div class="icon-box">
-            <h4><a href="">Join JayBeam 2.0 program to verify their name & area</a></h4>
+            <h4><a href="">Join Jaibhim 2.0 program to verify their name & area</a></h4>
             <p style="text-align:justify;">Verify your details who joined Jaibhim 2.0 project. Click here to verify your name / area / Ambedkar Library details..</p>
               <p><a href="{{ url('en/ambedkariyam-ambassadors') }}">To verify</a></p>
             </div>
